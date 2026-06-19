@@ -1,0 +1,15 @@
+#!/bin/bash
+# Maven Wrapper script for Unix
+# Downloads Maven if not present, then runs it
+
+MAVEN_HOME="$HOME/.m2/wrapper/dists/apache-maven-3.9.9"
+
+if [ ! -f "$MAVEN_HOME/bin/mvn" ]; then
+    echo "Downloading Maven 3.9.9..."
+    mkdir -p "$HOME/.m2/wrapper/dists"
+    curl -sL "https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.9/apache-maven-3.9.9-bin.zip" -o /tmp/maven.zip
+    unzip -q /tmp/maven.zip -d "$HOME/.m2/wrapper/dists"
+    rm /tmp/maven.zip
+fi
+
+"$MAVEN_HOME/bin/mvn" "$@"

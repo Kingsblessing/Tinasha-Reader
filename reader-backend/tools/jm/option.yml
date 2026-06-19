@@ -1,0 +1,5 @@
+download:
+  image:
+    suffix: .jpg
+dir_rule:
+  base_dir: D:/World_Plan/JMCrawler/Document
