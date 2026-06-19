@@ -1,5 +1,6 @@
 server:
   port: 8080
+  address: 0.0.0.0
 
 spring:
   datasource:
@@ -19,6 +20,9 @@ spring:
     multipart:
       max-file-size: 50MB
       max-request-size: 50MB
+  web:
+    resources:
+      static-locations: classpath:/static/
 
 # Reader custom config
 reader:
